@@ -1,0 +1,13 @@
+<p>login works!</p>
+<div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input id="uname" type="text" placeholder="Enter Username" name="uname" required [(ngModel)]="uname">
+
+    <label for="psw"><b>Password</b></label>
+    <input id="psw" type="password" placeholder="Enter Password" name="psw" required [(ngModel)]="psw">
+        
+    <button type="submit" (click)="submitForm()">Login</button>
+    <div id="error" *ngIf='error'>
+        {{this.error}}
+    </div>
+</div>
